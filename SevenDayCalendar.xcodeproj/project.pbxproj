@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2B005F02BD1C6640080D027 /* SevenDayCalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B005EF2BD1C6640080D027 /* SevenDayCalendarApp.swift */; };
+		A2B005F22BD1C6640080D027 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B005F12BD1C6640080D027 /* ContentView.swift */; };
+		A2B005F42BD1C6650080D027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B005F32BD1C6650080D027 /* Assets.xcassets */; };
+		A2B005F72BD1C6650080D027 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B005F62BD1C6650080D027 /* Preview Assets.xcassets */; };
+		A2B006012BD1C6650080D027 /* SevenDayCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B006002BD1C6650080D027 /* SevenDayCalendarTests.swift */; };
+		A2B0060B2BD1C6650080D027 /* SevenDayCalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B0060A2BD1C6650080D027 /* SevenDayCalendarUITests.swift */; };
+		A2B0060D2BD1C6650080D027 /* SevenDayCalendarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B0060C2BD1C6650080D027 /* SevenDayCalendarUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2B005FD2BD1C6650080D027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2B005E42BD1C6640080D027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2B005EB2BD1C6640080D027;
+			remoteInfo = SevenDayCalendar;
+		};
+		A2B006072BD1C6650080D027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2B005E42BD1C6640080D027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2B005EB2BD1C6640080D027;
+			remoteInfo = SevenDayCalendar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A2B005EC2BD1C6640080D027 /* SevenDayCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SevenDayCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B005EF2BD1C6640080D027 /* SevenDayCalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDayCalendarApp.swift; sourceTree = "<group>"; };
+		A2B005F12BD1C6640080D027 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A2B005F32BD1C6650080D027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2B005F62BD1C6650080D027 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2B005FC2BD1C6650080D027 /* SevenDayCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SevenDayCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B006002BD1C6650080D027 /* SevenDayCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDayCalendarTests.swift; sourceTree = "<group>"; };
+		A2B006062BD1C6650080D027 /* SevenDayCalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SevenDayCalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B0060A2BD1C6650080D027 /* SevenDayCalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDayCalendarUITests.swift; sourceTree = "<group>"; };
+		A2B0060C2BD1C6650080D027 /* SevenDayCalendarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDayCalendarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2B005E92BD1C6640080D027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B005F92BD1C6650080D027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B006032BD1C6650080D027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2B005E32BD1C6640080D027 = {
+			isa = PBXGroup;
+			children = (
+				A2B005EE2BD1C6640080D027 /* SevenDayCalendar */,
+				A2B005FF2BD1C6650080D027 /* SevenDayCalendarTests */,
+				A2B006092BD1C6650080D027 /* SevenDayCalendarUITests */,
+				A2B005ED2BD1C6640080D027 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2B005ED2BD1C6640080D027 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2B005EC2BD1C6640080D027 /* SevenDayCalendar.app */,
+				A2B005FC2BD1C6650080D027 /* SevenDayCalendarTests.xctest */,
+				A2B006062BD1C6650080D027 /* SevenDayCalendarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2B005EE2BD1C6640080D027 /* SevenDayCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				A2B005EF2BD1C6640080D027 /* SevenDayCalendarApp.swift */,
+				A2B005F12BD1C6640080D027 /* ContentView.swift */,
+				A2B005F32BD1C6650080D027 /* Assets.xcassets */,
+				A2B005F52BD1C6650080D027 /* Preview Content */,
+			);
+			path = SevenDayCalendar;
+			sourceTree = "<group>";
+		};
+		A2B005F52BD1C6650080D027 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A2B005F62BD1C6650080D027 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A2B005FF2BD1C6650080D027 /* SevenDayCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2B006002BD1C6650080D027 /* SevenDayCalendarTests.swift */,
+			);
+			path = SevenDayCalendarTests;
+			sourceTree = "<group>";
+		};
+		A2B006092BD1C6650080D027 /* SevenDayCalendarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A2B0060A2BD1C6650080D027 /* SevenDayCalendarUITests.swift */,
+				A2B0060C2BD1C6650080D027 /* SevenDayCalendarUITestsLaunchTests.swift */,
+			);
+			path = SevenDayCalendarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2B005EB2BD1C6640080D027 /* SevenDayCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2B006102BD1C6650080D027 /* Build configuration list for PBXNativeTarget "SevenDayCalendar" */;
+			buildPhases = (
+				A2B005E82BD1C6640080D027 /* Sources */,
+				A2B005E92BD1C6640080D027 /* Frameworks */,
+				A2B005EA2BD1C6640080D027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SevenDayCalendar;
+			productName = SevenDayCalendar;
+			productReference = A2B005EC2BD1C6640080D027 /* SevenDayCalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2B005FB2BD1C6650080D027 /* SevenDayCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2B006132BD1C6650080D027 /* Build configuration list for PBXNativeTarget "SevenDayCalendarTests" */;
+			buildPhases = (
+				A2B005F82BD1C6650080D027 /* Sources */,
+				A2B005F92BD1C6650080D027 /* Frameworks */,
+				A2B005FA2BD1C6650080D027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2B005FE2BD1C6650080D027 /* PBXTargetDependency */,
+			);
+			name = SevenDayCalendarTests;
+			productName = SevenDayCalendarTests;
+			productReference = A2B005FC2BD1C6650080D027 /* SevenDayCalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A2B006052BD1C6650080D027 /* SevenDayCalendarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2B006162BD1C6650080D027 /* Build configuration list for PBXNativeTarget "SevenDayCalendarUITests" */;
+			buildPhases = (
+				A2B006022BD1C6650080D027 /* Sources */,
+				A2B006032BD1C6650080D027 /* Frameworks */,
+				A2B006042BD1C6650080D027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2B006082BD1C6650080D027 /* PBXTargetDependency */,
+			);
+			name = SevenDayCalendarUITests;
+			productName = SevenDayCalendarUITests;
+			productReference = A2B006062BD1C6650080D027 /* SevenDayCalendarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2B005E42BD1C6640080D027 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					A2B005EB2BD1C6640080D027 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					A2B005FB2BD1C6650080D027 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A2B005EB2BD1C6640080D027;
+					};
+					A2B006052BD1C6650080D027 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A2B005EB2BD1C6640080D027;
+					};
+				};
+			};
+			buildConfigurationList = A2B005E72BD1C6640080D027 /* Build configuration list for PBXProject "SevenDayCalendar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2B005E32BD1C6640080D027;
+			productRefGroup = A2B005ED2BD1C6640080D027 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2B005EB2BD1C6640080D027 /* SevenDayCalendar */,
+				A2B005FB2BD1C6650080D027 /* SevenDayCalendarTests */,
+				A2B006052BD1C6650080D027 /* SevenDayCalendarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2B005EA2BD1C6640080D027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B005F72BD1C6650080D027 /* Preview Assets.xcassets in Resources */,
+				A2B005F42BD1C6650080D027 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B005FA2BD1C6650080D027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B006042BD1C6650080D027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2B005E82BD1C6640080D027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B005F22BD1C6640080D027 /* ContentView.swift in Sources */,
+				A2B005F02BD1C6640080D027 /* SevenDayCalendarApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B005F82BD1C6650080D027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B006012BD1C6650080D027 /* SevenDayCalendarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B006022BD1C6650080D027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B0060B2BD1C6650080D027 /* SevenDayCalendarUITests.swift in Sources */,
+				A2B0060D2BD1C6650080D027 /* SevenDayCalendarUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2B005FE2BD1C6650080D027 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2B005EB2BD1C6640080D027 /* SevenDayCalendar */;
+			targetProxy = A2B005FD2BD1C6650080D027 /* PBXContainerItemProxy */;
+		};
+		A2B006082BD1C6650080D027 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2B005EB2BD1C6640080D027 /* SevenDayCalendar */;
+			targetProxy = A2B006072BD1C6650080D027 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A2B0060E2BD1C6650080D027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A2B0060F2BD1C6650080D027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2B006112BD1C6650080D027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SevenDayCalendar/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Wendy.SevenDayCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2B006122BD1C6650080D027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SevenDayCalendar/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Wendy.SevenDayCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A2B006142BD1C6650080D027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Wendy.SevenDayCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SevenDayCalendar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SevenDayCalendar";
+			};
+			name = Debug;
+		};
+		A2B006152BD1C6650080D027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Wendy.SevenDayCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SevenDayCalendar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SevenDayCalendar";
+			};
+			name = Release;
+		};
+		A2B006172BD1C6650080D027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Wendy.SevenDayCalendarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SevenDayCalendar;
+			};
+			name = Debug;
+		};
+		A2B006182BD1C6650080D027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Wendy.SevenDayCalendarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SevenDayCalendar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2B005E72BD1C6640080D027 /* Build configuration list for PBXProject "SevenDayCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B0060E2BD1C6650080D027 /* Debug */,
+				A2B0060F2BD1C6650080D027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2B006102BD1C6650080D027 /* Build configuration list for PBXNativeTarget "SevenDayCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B006112BD1C6650080D027 /* Debug */,
+				A2B006122BD1C6650080D027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2B006132BD1C6650080D027 /* Build configuration list for PBXNativeTarget "SevenDayCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B006142BD1C6650080D027 /* Debug */,
+				A2B006152BD1C6650080D027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2B006162BD1C6650080D027 /* Build configuration list for PBXNativeTarget "SevenDayCalendarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B006172BD1C6650080D027 /* Debug */,
+				A2B006182BD1C6650080D027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2B005E42BD1C6640080D027 /* Project object */;
+}
