@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A25201372BD30346002D509E /* CuteAnimalsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25201362BD30346002D509E /* CuteAnimalsApi.swift */; };
 		A2B005F02BD1C6640080D027 /* SevenDayCalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B005EF2BD1C6640080D027 /* SevenDayCalendarApp.swift */; };
 		A2B005F22BD1C6640080D027 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B005F12BD1C6640080D027 /* CalendarView.swift */; };
 		A2B005F42BD1C6650080D027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B005F32BD1C6650080D027 /* Assets.xcassets */; };
@@ -14,7 +15,6 @@
 		A2B006012BD1C6650080D027 /* SevenDayCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B006002BD1C6650080D027 /* SevenDayCalendarTests.swift */; };
 		A2B0060B2BD1C6650080D027 /* SevenDayCalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B0060A2BD1C6650080D027 /* SevenDayCalendarUITests.swift */; };
 		A2B0060D2BD1C6650080D027 /* SevenDayCalendarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B0060C2BD1C6650080D027 /* SevenDayCalendarUITestsLaunchTests.swift */; };
-		A2B0061A2BD227AA0080D027 /* CalendarDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B006192BD227AA0080D027 /* CalendarDay.swift */; };
 		A2B0061C2BD22C500080D027 /* CalendarWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B0061B2BD22C500080D027 /* CalendarWeek.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A25201362BD30346002D509E /* CuteAnimalsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuteAnimalsApi.swift; sourceTree = "<group>"; };
 		A2B005EC2BD1C6640080D027 /* SevenDayCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SevenDayCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B005EF2BD1C6640080D027 /* SevenDayCalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDayCalendarApp.swift; sourceTree = "<group>"; };
 		A2B005F12BD1C6640080D027 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		A2B006062BD1C6650080D027 /* SevenDayCalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SevenDayCalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B0060A2BD1C6650080D027 /* SevenDayCalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDayCalendarUITests.swift; sourceTree = "<group>"; };
 		A2B0060C2BD1C6650080D027 /* SevenDayCalendarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDayCalendarUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A2B006192BD227AA0080D027 /* CalendarDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDay.swift; sourceTree = "<group>"; };
 		A2B0061B2BD22C500080D027 /* CalendarWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeek.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,8 +102,8 @@
 				A2B005F12BD1C6640080D027 /* CalendarView.swift */,
 				A2B005F32BD1C6650080D027 /* Assets.xcassets */,
 				A2B005F52BD1C6650080D027 /* Preview Content */,
-				A2B006192BD227AA0080D027 /* CalendarDay.swift */,
 				A2B0061B2BD22C500080D027 /* CalendarWeek.swift */,
+				A25201362BD30346002D509E /* CuteAnimalsApi.swift */,
 			);
 			path = SevenDayCalendar;
 			sourceTree = "<group>";
@@ -264,8 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2B005F22BD1C6640080D027 /* CalendarView.swift in Sources */,
+				A25201372BD30346002D509E /* CuteAnimalsApi.swift in Sources */,
 				A2B005F02BD1C6640080D027 /* SevenDayCalendarApp.swift in Sources */,
-				A2B0061A2BD227AA0080D027 /* CalendarDay.swift in Sources */,
 				A2B0061C2BD22C500080D027 /* CalendarWeek.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

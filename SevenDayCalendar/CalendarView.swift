@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CalendarView: View {
-    
     @EnvironmentObject var calendarWeek: CalendarWeek
     
     var body: some View {
@@ -31,5 +30,8 @@ struct CalendarView: View {
             }
         }
         .padding(10)
+        .task {
+            await calendarWeek.loadBackgroundImages()
+        }
     }
 }
