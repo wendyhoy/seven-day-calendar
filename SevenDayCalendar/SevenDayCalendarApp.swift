@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SevenDayCalendarApp: App {
+    @StateObject private var currentWeek = CalendarWeek()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CalendarView()
+                .environmentObject(currentWeek)
         }
     }
 }

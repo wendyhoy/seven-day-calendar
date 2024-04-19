@@ -7,16 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    let daysOfTheWeek: [String] = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-    ]
+struct CalendarView: View {
+    
+    @EnvironmentObject var calendarWeek: CalendarWeek
     
     var body: some View {
         VStack {
@@ -26,13 +19,12 @@ struct ContentView: View {
             
             ScrollView {
                 LazyVStack {
-                    ForEach(daysOfTheWeek, id: \.description) {
-                        day in Text(day)
+                    ForEach(calendarWeek.days) {
+                        calendarDay in Text(calendarDay.date)
                             .font(.largeTitle)
                             .padding(80)
                             .frame(maxWidth: .infinity)
-                            .background(Rectangle()
-                                .fill(.red))
+                            .background(Rectangle().fill(.red))
                             .border(.black)
                     }
                 }
@@ -40,8 +32,4 @@ struct ContentView: View {
         }
         .padding(10)
     }
-}
-
-#Preview {
-    ContentView()
 }
