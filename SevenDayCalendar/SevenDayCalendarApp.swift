@@ -13,8 +13,10 @@ struct SevenDayCalendarApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CalendarWeekView()
-                .environmentObject(currentWeek)
+            NavigationStack {
+                CalendarWeekView()
+                    .environmentObject(currentWeek)
+            }
         }
     }
 }

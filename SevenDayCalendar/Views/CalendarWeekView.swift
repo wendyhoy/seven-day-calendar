@@ -12,10 +12,7 @@ struct CalendarWeekView: View {
 
     var body: some View {
         VStack {
-            Text("Cute Animal Seven-Day Calendar")
-                .font(.headline)
-                .padding()
-            
+            Spacer()
             ScrollView {
                 LazyVStack {
                     ForEach(calendarWeek.days) {
@@ -24,7 +21,7 @@ struct CalendarWeekView: View {
                 }
             }
         }
-        .padding(10)
+        .navigationTitle("TGI Furiday")
         .task {
             await calendarWeek.loadBackgroundImages()
         }
