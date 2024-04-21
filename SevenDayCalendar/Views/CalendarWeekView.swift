@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CalendarWeekView: View {
-    @EnvironmentObject var calendarWeek: CalendarWeek
+    @EnvironmentObject var calendarWeek: CalendarWeekViewModel
 
     var body: some View {
         VStack {

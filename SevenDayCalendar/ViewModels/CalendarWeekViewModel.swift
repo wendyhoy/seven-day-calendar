@@ -1,5 +1,5 @@
 //
-//  CalendarWeek.swift
+//  CalendarWeekViewModel.swift
 //  SevenDayCalendar
 //
 //  Created by Wendy Hoy on 2024-04-18.
@@ -7,15 +7,15 @@
 
 import Foundation
 
-class CalendarWeek: ObservableObject {
+class CalendarWeekViewModel: ObservableObject {
     let numDays: UInt = 7
-    @Published var days: [CalendarDay] = []
+    @Published var days: [CalendarDayModel] = []
 
     init(date: Date) {
         days = getDays(today: date)
     }
     
-    func loadBackgroundImages(currentWeek: [CalendarDay]) async {
+    func loadBackgroundImages(currentWeek: [CalendarDayModel]) async {
         let currentWeekWithImages = await updateBackgroundImages(currentWeek: currentWeek)
         
         Task { @MainActor in
@@ -32,9 +32,9 @@ class CalendarWeek: ObservableObject {
         }
     }
 
-    private func getDays(today: Date) -> [CalendarDay] {
+    private func getDays(today: Date) -> [CalendarDayModel] {
         let weekday = Calendar.current.component(.weekday, from: today)
-        var currentWeek: [CalendarDay] = []
+        var currentWeek: [CalendarDayModel] = []
 
         // Creates one day for every day of this week
         for index in 1...Int(numDays) {
@@ -50,7 +50,7 @@ class CalendarWeek: ObservableObject {
                 formatted = "Today: \(formatted)"
             }
             
-            let calendarDay = CalendarDay(date: formatted)
+            let calendarDay = CalendarDayModel(date: formatted)
 
             currentWeek.append(calendarDay)
         }
@@ -58,14 +58,14 @@ class CalendarWeek: ObservableObject {
         return currentWeek
     }
     
-    private func updateBackgroundImages(currentWeek: [CalendarDay]) async -> [CalendarDay] {
+    private func updateBackgroundImages(currentWeek: [CalendarDayModel]) async -> [CalendarDayModel] {
         var currentWeekWithImages = currentWeek
         
         do {
             let images = try await CuteAnimalsApi.shared.getImageUrls(numImages: numDays)
 
             currentWeekWithImages = currentWeek.enumerated().map { (index, day) in
-                return CalendarDay(date: day.date, backgroundImageUrl: images[index])
+                return CalendarDayModel(date: day.date, backgroundImageUrl: images[index])
             }
         } catch {
             print("Error: \(error).")

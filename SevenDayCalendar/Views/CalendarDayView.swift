@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CalendarDayView: View {
-    let calendarDay: CalendarDay
+    let calendarDay: CalendarDayModel
 
     var body: some View {
         Text(calendarDay.date)
