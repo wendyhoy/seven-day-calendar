@@ -13,7 +13,7 @@ struct SevenDayCalendarApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CalendarView()
+            CalendarWeekView()
                 .environmentObject(currentWeek)
         }
     }

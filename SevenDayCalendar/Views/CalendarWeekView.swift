@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct CalendarView: View {
+struct CalendarWeekView: View {
     @EnvironmentObject var calendarWeek: CalendarWeek
-    
+
     var body: some View {
         VStack {
             Text("Cute Animal Seven-Day Calendar")
@@ -19,12 +19,7 @@ struct CalendarView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(calendarWeek.days) {
-                        calendarDay in Text(calendarDay.date)
-                            .font(.largeTitle)
-                            .padding(80)
-                            .frame(maxWidth: .infinity)
-                            .background(Rectangle().fill(.red))
-                            .border(.black)
+                        day in CalendarDayView(calendarDay: day)
                     }
                 }
             }
