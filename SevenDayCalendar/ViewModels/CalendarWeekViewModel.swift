@@ -18,12 +18,17 @@ class CalendarWeek: ObservableObject {
         // Creates one day for every day of this week
         for index in 1...Int(numDays) {
             let day = Calendar.current.date(byAdding: .day, value: index-weekday, to: today)
-            let formatted = day!.formatted(
+            var formatted = day!.formatted(
                 Date.FormatStyle()
                     .weekday(.abbreviated)
                     .month(.abbreviated)
                     .day(.twoDigits)
             )
+            
+            if day == today {
+                formatted = "Today: \(formatted)"
+            }
+            
             let calendarDay = CalendarDay(date: formatted)
 
             currentWeek.append(calendarDay)
