@@ -11,7 +11,28 @@ class CalendarWeek: ObservableObject {
     let numDays: UInt = 7
     @Published var days: [CalendarDay] = []
 
-    init(today: Date) {
+    init(date: Date) {
+        days = getDays(today: date)
+    }
+    
+    func loadBackgroundImages(currentWeek: [CalendarDay]) async {
+        let currentWeekWithImages = await updateBackgroundImages(currentWeek: currentWeek)
+        
+        Task { @MainActor in
+            days = currentWeekWithImages
+        }
+    }
+    
+    func refresh(date: Date) async {
+        let currentWeek = getDays(today: date)
+        let currentWeekWithImages = await updateBackgroundImages(currentWeek: currentWeek)
+
+        Task { @MainActor in
+            days = currentWeekWithImages
+        }
+    }
+
+    private func getDays(today: Date) -> [CalendarDay] {
         let weekday = Calendar.current.component(.weekday, from: today)
         var currentWeek: [CalendarDay] = []
 
@@ -34,22 +55,22 @@ class CalendarWeek: ObservableObject {
             currentWeek.append(calendarDay)
         }
 
-        days = currentWeek
+        return currentWeek
     }
-
-    func loadBackgroundImages() async {
+    
+    private func updateBackgroundImages(currentWeek: [CalendarDay]) async -> [CalendarDay] {
+        var currentWeekWithImages = currentWeek
+        
         do {
-            let backgroundImageApi = CuteAnimalsApi()
-            let images = try await backgroundImageApi.getImageUrls(numImages: numDays)
-            
-            Task { @MainActor in
-                days = days.enumerated().map { (index, day) in
-                    return CalendarDay(date: day.date, backgroundImageUrl: images[index])
-                }
-                print(days)
+            let images = try await CuteAnimalsApi.shared.getImageUrls(numImages: numDays)
+
+            currentWeekWithImages = currentWeek.enumerated().map { (index, day) in
+                return CalendarDay(date: day.date, backgroundImageUrl: images[index])
             }
         } catch {
             print("Error: \(error).")
         }
+
+        return currentWeekWithImages
     }
 }

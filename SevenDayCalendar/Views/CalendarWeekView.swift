@@ -23,7 +23,10 @@ struct CalendarWeekView: View {
         }
         .navigationTitle("TGI Furiday")
         .task {
-            await calendarWeek.loadBackgroundImages()
+            await calendarWeek.loadBackgroundImages(currentWeek: calendarWeek.days)
+        }
+        .refreshable {
+            await calendarWeek.refresh(date: Date.now)
         }
     }
 }
