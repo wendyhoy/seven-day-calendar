@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct CalendarWeekView: View {
-    @EnvironmentObject var calendarWeek: CalendarWeekViewModel
+    @EnvironmentObject var currentWeek: CalendarWeekViewModel
 
     var body: some View {
         VStack {
             Spacer()
             ScrollView {
                 LazyVStack {
-                    ForEach(calendarWeek.days) {
+                    ForEach(currentWeek.days) {
                         day in CalendarDayView(calendarDay: day)
                     }
                 }
@@ -23,10 +23,10 @@ struct CalendarWeekView: View {
         }
         .navigationTitle("TGI Furiday")
         .task {
-            await calendarWeek.loadBackgroundImages(currentWeek: calendarWeek.days)
+            await currentWeek.loadBackgroundImages(calendarDays: currentWeek.days)
         }
         .refreshable {
-            await calendarWeek.refresh(date: Date.now)
+            await currentWeek.refresh(date: Date.now)
         }
     }
 }

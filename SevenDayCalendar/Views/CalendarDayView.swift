@@ -11,7 +11,7 @@ struct CalendarDayView: View {
     let calendarDay: CalendarDayModel
 
     var body: some View {
-        Text(calendarDay.date)
+        Text(calendarDay.dateStr)
             .font(.largeTitle)
             .fontWeight(.bold)
             .foregroundStyle(.white)

@@ -9,6 +9,6 @@ import Foundation
 
 struct CalendarDayModel: Identifiable {
     let id = UUID()
-    let date: String
+    let dateStr: String
     var backgroundImageUrl: URL?
 }
