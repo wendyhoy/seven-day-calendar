@@ -37,18 +37,7 @@ class CalendarWeekViewModel: ObservableObject {
         // Creates one day for every day of this week
         for index in 1...Int(numDays) {
             let day = Calendar.current.date(byAdding: .day, value: index-weekday, to: date)!
-            var formatted = day.formatted(
-                Date.FormatStyle()
-                    .weekday(.abbreviated)
-                    .month(.abbreviated)
-                    .day(.twoDigits)
-            )
-
-            if Calendar.current.isDateInToday(day) {
-                formatted = "Today: \(formatted)"
-            }
-
-            let calendarDay = CalendarDayModel(dateStr: formatted)
+            let calendarDay = CalendarDayModel(date: day)
 
             calendarDays.append(calendarDay)
         }
@@ -63,7 +52,7 @@ class CalendarWeekViewModel: ObservableObject {
             let images = try await CuteAnimalsApi.shared.getImageUrls(numImages: numDays)
 
             daysWithImages = calendarDays.enumerated().map { (index, day) in
-                return CalendarDayModel(dateStr: day.dateStr, backgroundImageUrl: images[index])
+                return CalendarDayModel(date: day.date, backgroundImageUrl: images[index])
             }
         } catch {
             print("Error: \(error).")

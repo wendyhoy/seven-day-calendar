@@ -18,20 +18,20 @@ final class SevenDayCalendarTests: XCTestCase {
         components.day = 17
 
         let input = Calendar.current.date(from: components)!
-        let expected: [CalendarDayModel] = [
-            CalendarDayModel(dateStr: "Sun, Apr 14"),
-            CalendarDayModel(dateStr: "Mon, Apr 15"),
-            CalendarDayModel(dateStr: "Tue, Apr 16"),
-            CalendarDayModel(dateStr: "Wed, Apr 17"),
-            CalendarDayModel(dateStr: "Thu, Apr 18"),
-            CalendarDayModel(dateStr: "Fri, Apr 19"),
-            CalendarDayModel(dateStr: "Sat, Apr 20")
+        let expected: [String] = [
+            "Sun, Apr 14",
+            "Mon, Apr 15",
+            "Tue, Apr 16",
+            "Wed, Apr 17",
+            "Thu, Apr 18",
+            "Fri, Apr 19",
+            "Sat, Apr 20"
         ]
 
         let actual = CalendarWeekViewModel(date: input).days
 
         for (index, day) in actual.enumerated() {
-            XCTAssertEqual(day.dateStr, expected[index].dateStr, "A day of the week is incorrect. Actual: \(day.dateStr) Expected: \(expected[index].dateStr)")
+            XCTAssertEqual(day.dateStr, expected[index], "A day of the week is incorrect. Actual: \(day.dateStr) Expected: \(expected[index])")
         }
     }
 
