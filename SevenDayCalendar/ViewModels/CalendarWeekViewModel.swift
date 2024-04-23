@@ -7,14 +7,19 @@
 
 import Foundation
 
+/// Represents the calendar week.
 class CalendarWeekViewModel: ObservableObject {
     let numDays: UInt = 7
     @Published var days: [CalendarDayModel] = []
-
+    
+    /// Generates the days of the week given a date.
+    /// - Parameter date: The reference date.
     init(date: Date) {
         days = getDays(date: date)
     }
-
+    
+    /// Loads the background image URL into each day of the given week.
+    /// - Parameter calendarDays: An array of calendar days to update.
     @MainActor
     func loadBackgroundImages(calendarDays: [CalendarDayModel]) async {
         let daysWithImages = await getBackgroundImages(calendarDays: calendarDays)
@@ -22,6 +27,8 @@ class CalendarWeekViewModel: ObservableObject {
         days = daysWithImages
     }
 
+    /// Updates the days of the week given a date and loads new background image URLs.
+    /// - Parameter date: The reference date.
     @MainActor
     func refresh(date: Date) async {
         let refreshDays = getDays(date: date)
@@ -29,7 +36,10 @@ class CalendarWeekViewModel: ObservableObject {
 
         days = daysWithImages
     }
-
+    
+    /// Returns the days of the week given a date.
+    /// - Parameter date: The reference date.
+    /// - Returns: The days of the week for the given date.
     private func getDays(date: Date) -> [CalendarDayModel] {
         let weekday = Calendar.current.component(.weekday, from: date)
         var calendarDays: [CalendarDayModel] = []
@@ -44,7 +54,10 @@ class CalendarWeekViewModel: ObservableObject {
 
         return calendarDays
     }
-
+    
+    /// Updates the background image URLs of the given calendar days.
+    /// - Parameter calendarDays: An array of calendar days to update.
+    /// - Returns: An array of calendar days with updated background image URLs.
     private func getBackgroundImages(calendarDays: [CalendarDayModel]) async -> [CalendarDayModel] {
         var daysWithImages = calendarDays
 

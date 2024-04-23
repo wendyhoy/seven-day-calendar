@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Asynchronously loads and displays the background image for the day.
 struct BackgroundImage: View {
     var imageUrl: URL?
 

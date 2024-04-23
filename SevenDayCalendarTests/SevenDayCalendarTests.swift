@@ -8,9 +8,10 @@
 import XCTest
 @testable import SevenDayCalendar
 
+/// Unit tests for the seven day calendar app.
 final class SevenDayCalendarTests: XCTestCase {
 
-    // Test Wednesday, April 24, 2024
+    /// Tests that the CalendarWeekViewModel generates the right days of the week given a date.
     func testCalendarWeekViewModel_init() throws {
         var components = DateComponents()
         components.year = 2024
@@ -35,7 +36,7 @@ final class SevenDayCalendarTests: XCTestCase {
         }
     }
 
-    // Test backgroundImageUrls are set
+    /// Tests that the CalendarWeekViewModel updates the background image URLs from the API.
     func testCalendarWeekViewModel_loadBackgroundImages() async throws {
         let week = CalendarWeekViewModel(date: Date.now)
         let input = week.days
@@ -47,7 +48,7 @@ final class SevenDayCalendarTests: XCTestCase {
         }
     }
 
-    // Test dates and backgroundImageUrls are updated
+    /// Tests that on refresh, the days are updated based on today and there are new background images.
     func testCalendarWeekViewModel_refresh() async throws {
         var components = DateComponents()
         components.year = 2024

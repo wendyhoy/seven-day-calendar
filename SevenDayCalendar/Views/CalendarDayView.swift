@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays the formatted date and background image for the day.
 struct CalendarDayView: View {
     let calendarDay: CalendarDayModel
 

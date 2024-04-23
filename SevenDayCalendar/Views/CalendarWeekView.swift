@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Displays the days of the week and can trigger updating the days and background images.
 struct CalendarWeekView: View {
     @EnvironmentObject var currentWeek: CalendarWeekViewModel
 

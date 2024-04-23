@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Represents the data for one image returned by the Cat API.
 struct CuteAnimal: Codable {
     var id: String
     var url: String
@@ -14,6 +15,7 @@ struct CuteAnimal: Codable {
     var height: UInt
 }
 
+/// Wrapper class for the Cat API.
 class CuteAnimalsApi {
     static let shared = CuteAnimalsApi()
     let urlString = "https://api.thecatapi.com/v1/images/search?limit=10"
@@ -25,7 +27,10 @@ class CuteAnimalsApi {
         case failedRequest
         case notEnoughImages
     }
-
+    
+    /// Returns up to 10 image URLs from the Cat API.
+    /// - Parameter numImages: Number of images to return.
+    /// - Returns: An array of image URLs of the given size.
     func getImageUrls(numImages: UInt) async throws -> [URL?] {
         guard let url = URL(string: urlString) else { throw ApiError.invalidUrl }
 
