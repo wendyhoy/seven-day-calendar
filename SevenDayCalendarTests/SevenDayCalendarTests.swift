@@ -10,27 +10,69 @@ import XCTest
 
 final class SevenDayCalendarTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    // Test Wednesday, April 24, 2024
+    func testCalendarWeekViewModel_init() throws {
+        var components = DateComponents()
+        components.year = 2024
+        components.month = 4
+        components.day = 17
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        let input = Calendar.current.date(from: components)!
+        let expected: [CalendarDayModel] = [
+            CalendarDayModel(dateStr: "Sun, Apr 14"),
+            CalendarDayModel(dateStr: "Mon, Apr 15"),
+            CalendarDayModel(dateStr: "Tue, Apr 16"),
+            CalendarDayModel(dateStr: "Wed, Apr 17"),
+            CalendarDayModel(dateStr: "Thu, Apr 18"),
+            CalendarDayModel(dateStr: "Fri, Apr 19"),
+            CalendarDayModel(dateStr: "Sat, Apr 20")
+        ]
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+        let actual = CalendarWeekViewModel(date: input).days
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        for (index, day) in actual.enumerated() {
+            XCTAssertEqual(day.dateStr, expected[index].dateStr, "A day of the week is incorrect. Actual: \(day.dateStr) Expected: \(expected[index].dateStr)")
         }
     }
 
+    // Test backgroundImageUrls are set
+    func testCalendarWeekViewModel_loadBackgroundImages() async throws {
+        let week = CalendarWeekViewModel(date: Date.now)
+        let input = week.days
+
+        await week.loadBackgroundImages(calendarDays: input)
+
+        for day in week.days {
+            XCTAssertNotNil(day.backgroundImageUrl, "backgroundImageUrl for \(day.dateStr) should not be nil.")
+        }
+    }
+
+    // Test dates and backgroundImageUrls are updated
+    func testCalendarWeekViewModel_refresh() async throws {
+        var components = DateComponents()
+        components.year = 2024
+        components.month = 4
+        components.day = 17
+
+        let date = Calendar.current.date(from: components)!
+        let week = CalendarWeekViewModel(date: date)
+
+        await week.loadBackgroundImages(calendarDays: week.days)
+
+        let before = week.days
+
+        await week.refresh(date: Date.now)
+
+        let after = week.days
+        var hasToday = false;
+
+        for (index, day) in after.enumerated() {
+            hasToday = hasToday || day.dateStr.hasPrefix("Today")
+            XCTAssertNotEqual(day.dateStr, before[index].dateStr, "A date didn't refresh. After: \(day.dateStr) Before: \(before[index].dateStr)")
+            XCTAssertNotEqual(day.backgroundImageUrl, before[index].backgroundImageUrl, "A backgroundImageUrl didn't refresh. After: \(day.backgroundImageUrl!) Before: \(before[index].backgroundImageUrl!)")
+            XCTAssertNotNil(day.backgroundImageUrl, "backgroundImageUrl for \(day.dateStr) should not be nil.")
+        }
+
+        XCTAssertTrue(hasToday, "The refreshed week does not have today as a date.")
+    }
 }

@@ -14,22 +14,26 @@ class CalendarWeekViewModel: ObservableObject {
     init(date: Date) {
         days = getDays(date: date)
     }
-    
+
     func loadBackgroundImages(calendarDays: [CalendarDayModel]) async {
         let daysWithImages = await getBackgroundImages(calendarDays: calendarDays)
-        
-        Task { @MainActor in
+
+        let task = Task { @MainActor in
             days = daysWithImages
         }
+        
+        await task.value
     }
-    
+
     func refresh(date: Date) async {
         let refreshDays = getDays(date: date)
         let daysWithImages = await getBackgroundImages(calendarDays: refreshDays)
 
-        Task { @MainActor in
+        let task = Task { @MainActor in
             days = daysWithImages
         }
+        
+        await task.value
     }
 
     private func getDays(date: Date) -> [CalendarDayModel] {
@@ -45,11 +49,11 @@ class CalendarWeekViewModel: ObservableObject {
                     .month(.abbreviated)
                     .day(.twoDigits)
             )
-            
+
             if Calendar.current.isDateInToday(day) {
                 formatted = "Today: \(formatted)"
             }
-            
+
             let calendarDay = CalendarDayModel(dateStr: formatted)
 
             calendarDays.append(calendarDay)
@@ -57,10 +61,10 @@ class CalendarWeekViewModel: ObservableObject {
 
         return calendarDays
     }
-    
+
     private func getBackgroundImages(calendarDays: [CalendarDayModel]) async -> [CalendarDayModel] {
         var daysWithImages = calendarDays
-        
+
         do {
             let images = try await CuteAnimalsApi.shared.getImageUrls(numImages: numDays)
 
