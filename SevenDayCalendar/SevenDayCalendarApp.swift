@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct SevenDayCalendarApp: App {
     @StateObject private var currentWeek = CalendarWeekViewModel(date: Date.now)
-    
+
     var body: some Scene {
         WindowGroup {
             NavigationStack {

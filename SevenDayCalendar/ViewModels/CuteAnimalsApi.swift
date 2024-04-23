@@ -17,9 +17,9 @@ struct CuteAnimal: Codable {
 class CuteAnimalsApi {
     static let shared = CuteAnimalsApi()
     let urlString = "https://api.thecatapi.com/v1/images/search?limit=10"
-    
+
     private init() { }
-    
+
     enum ApiError: Error {
         case invalidUrl
         case failedRequest
