@@ -15,25 +15,19 @@ class CalendarWeekViewModel: ObservableObject {
         days = getDays(date: date)
     }
 
+    @MainActor
     func loadBackgroundImages(calendarDays: [CalendarDayModel]) async {
         let daysWithImages = await getBackgroundImages(calendarDays: calendarDays)
 
-        let task = Task { @MainActor in
-            days = daysWithImages
-        }
-        
-        await task.value
+        days = daysWithImages
     }
 
+    @MainActor
     func refresh(date: Date) async {
         let refreshDays = getDays(date: date)
         let daysWithImages = await getBackgroundImages(calendarDays: refreshDays)
 
-        let task = Task { @MainActor in
-            days = daysWithImages
-        }
-        
-        await task.value
+        days = daysWithImages
     }
 
     private func getDays(date: Date) -> [CalendarDayModel] {
